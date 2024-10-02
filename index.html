@@ -1,30 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
-    /></noscript>
-    <title>Pomodoro App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pomodoro</title>
+    <link rel="stylesheet" src="app.css">
+</head>
+<body>
+    <div id="timer-message">Please select a timer before starting.</div>
+
+<div class="container">
+      <div class="timer">
+        <h1>🍅 Pomodoro Timer</h1>
+
+        <div class="button-container">
+          <button class="button" id="pomodoro-session">Pomodoro</button>
+          <button class="button" id="short-break">Short Break</button>
+          <button class="button" id="long-break">Long break</button>
+        </div>
+
+        <div id="pomodoro-timer" class="timer-display" data-duration="25.00">
+          25:00
+        </div>
+
+        <div id="short-timer" class="timer-display" data-duration="5.00">
+          5:00
+        </div>
+
+        <div id="long-timer" class="timer-display" data-duration="10.00">
+          10:00
+        </div>
+
+        <div id="buttons">
+          <button id="start">START</button>
+          <button id="stop">STOP</button>
+        </div>
+      </div>
+    </div>
+    
+</body>
+<script src="main.js"></script>
 </html>
